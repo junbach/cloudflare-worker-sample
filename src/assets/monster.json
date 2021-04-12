@@ -1,0 +1,40 @@
+[
+  {
+    "id": "m01",
+    "name": "Slime",
+    "skill": [
+      { "name": "Splash", "mana": 0, "desc": "The monster just flops and splashes around to no effect at all" }
+    ],
+    "location": ["Jura Forest", "Kagandian Plain"]
+  },
+  {
+    "id": "m02",
+    "name": "Goblin",
+    "skill": [
+      {
+        "name": "Tackle",
+        "mana": 1,
+        "desc": "A physical attack in which the monster charges and slams into the target with its whole body."
+      },
+      {
+        "name": "Sand Attack",
+        "mana": 1,
+        "desc": "Reduces accuracy by throwing sand."
+      }
+    ],
+    "location": ["Kagandian Plain"]
+  },
+  {
+    "id": "m03",
+    "name": "Lizardman",
+    "skill": [
+      { "name": "Lick", "mana": 0, "desc": "The foe is licked and hit with a long tongue" },
+      {
+        "name": "Harden",
+        "mana": 0,
+        "desc": "The user stiffens all the muscles in its body to raise its Defense stat."
+      }
+    ],
+    "location": ["Central Swarm", "Moon Lake"]
+  }
+]
