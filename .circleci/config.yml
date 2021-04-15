@@ -5,8 +5,9 @@ jobs:
       - image: circleci/node:lts
     steps:
       - checkout
+      - run: npm install --prefix=$HOME/.local --global wrangler
       - run: npm ci --cache .npm --prefer-offline --no-audit --no-optional
-      - run: npx wrangler publish
+      - run: wrangler publish
 workflows:
   deploy:
     jobs:
