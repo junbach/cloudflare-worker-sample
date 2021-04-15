@@ -10,7 +10,12 @@ jobs:
       - node/install-packages
       - run: npm run publish
 workflows:
-  deploy:
+  "Cloudflare worker deployment":
+    when:
+      equal: [ master, << pipeline.git.branch >> ]
     jobs:
       - deploy:
           context: cf-context
+          filters:
+            branches:
+              only: master
