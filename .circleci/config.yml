@@ -8,7 +8,7 @@ jobs:
     steps:
       - checkout
       - node/install-packages
-      - run: npx wrangler publish
+      - run: npm run publish
 workflows:
   deploy:
     jobs:
