@@ -1,13 +1,12 @@
 version: 2.1
+orbs:
+  node: circleci/node@4.2.1
 jobs:
   deploy:
-    docker:
-      - image: circleci/node:lts
     steps:
       - checkout
-      - run: npm install --prefix=$HOME/.local --global wrangler
-      - run: npm ci --cache .npm --prefer-offline --no-audit --no-optional
-      - run: wrangler publish
+      - node/install-packages
+      - run: npx wrangler publish
 workflows:
   deploy:
     jobs:
