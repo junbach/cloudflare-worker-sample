@@ -6,7 +6,7 @@ jobs:
     steps:
       - checkout
       - run: npm ci --cache .npm --prefer-offline --no-audit --no-optional
-      - run: npx --no-install wrangler publish
+      - run: npx wrangler publish
 workflows:
   deploy:
     jobs:
