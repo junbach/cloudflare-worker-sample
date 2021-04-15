@@ -3,7 +3,8 @@ orbs:
   node: circleci/node@4.2.1
 jobs:
   deploy:
-    executor: node/lts
+    docker:
+      - image: circleci/node:lts
     steps:
       - checkout
       - node/install-packages
